@@ -2,6 +2,50 @@
 
 A sandbox repo for working through the exercises of the [[https://exercism.io/tracks/elisp][Emacs Lisp track]].
 
+** Exercises
+
 - [[file:hello-world/][Hello World]]
 - [[file:two-fer/][Two Fer]]
+
+** Running Tests
+
+A good overview of running the Exercism tests for a given exercise is found [[https://exercism.io/tracks/elisp/tests][here]].
+
+I took that and extended it a bit to feel a little more like how I would run a test suite in Vim. Ideally I wanted a way to run the tests described in any =*test.el= file of the working directory with only a couple of key presses.
+
+In Vim, I might dynamically type something like this which allows me to type =<leader>t= to run the test suite:
+
+#+BEGIN_SRC
+:nnoremap <leader>t :!test-runner.sh<cr>
+#+END_SRC
+
+After reading the Exercism doc and looking around on StackOverflow, I settled on this workflow initially, but might make adjustments as I learn more!
+
+*** 1. Create a bash file to run the Emacs test in batch
+
+Save this script somewhere in your path, for me, =~/bin/ert-run.sh=:
+
+#+BEGIN_SRC bash
+#!/usr/bin/env bash
+emacs -batch -l ert -l $1 -f ert-run-tests-batch-and-exit
+#+END_SRC
+
+*** 2. Define an elisp function to run the script file
+
+I did this in the scratch buffer, but might eventually move it to the =init.el= file. To load this function into memory, position the cursor at the closing parens and =M-x eval-defun=
+
+#+BEGIN_SRC elisp
+(defun exercism-tests ()
+  (interactive)
+  (save-buffer)
+  (compile "ert-run.sh *test.el"))
+#+END_SRC
+
+*** 3. Bind the custom funtion to a key-binding
+
+Now that the =exercism-tests= function has been loaded into memory, bind it to a key sequence in a similar way of positioning the cursor at the closing parens and =M-x eval
+
+#+BEGIN_SRC elisp
+(local-set-key (kbd "C-c C-t") 'exercism-test)
+#+END_SRC
 
