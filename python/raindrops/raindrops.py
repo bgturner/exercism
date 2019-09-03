@@ -6,7 +6,5 @@ def convert(number):
         message += 'Plang'
     if(number % 7 == 0):
         message += 'Plong'
-    if(message == ''):
-        return str(number)
-    else:
-        return message
+
+    return message or str(number)
