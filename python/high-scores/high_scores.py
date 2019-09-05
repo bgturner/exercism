@@ -1,9 +1,9 @@
 def latest(scores):
-    return 30
+    return scores[-1]
 
 
 def personal_best(scores):
-    return 100
+    return max(scores)
 
 
 # Good doc overview of sorting:
