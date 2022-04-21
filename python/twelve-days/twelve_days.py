@@ -17,22 +17,21 @@ potential_gifts = [
     ]
 
 
-def get_line(start_verse, end_verse):
-    day = days[end_verse - 1]
+def get_line(day):
     gifts = ''
-    while end_verse > 0:
-        if len(gifts) > 0 and end_verse == 1:
+    while day > 0:
+        if len(gifts) > 0 and day == 1:
             gifts += " and"
-        end_verse -= 1
-        gifts += potential_gifts[end_verse]
+        day -= 1
+        gifts += potential_gifts[day]
     return (
         "On the {} day of Christmas my true love gave to me:{}"
-        ).format(day, gifts)
+        ).format(days[day-1], gifts)
 
 
 def recite(start_verse, end_verse):
     song = []
     while start_verse <= end_verse:
-        song.append(get_line(start_verse, end_verse))
+        song.append(get_line(end_verse))
         end_verse -= 1
     return song[::-1]
