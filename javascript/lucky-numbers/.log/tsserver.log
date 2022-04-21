@@ -1,0 +1,61 @@
+Info 0    [20:58:10.598] Starting TS Server
+Info 1    [20:58:10.599] Version: 4.5.5
+Info 2    [20:58:10.599] Arguments: /home/benjamin/.nvm/versions/node/v14.19.0/bin/node /home/benjamin/.dot-files/emacs/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/tsserver.js --logFile /home/benjamin/exercism/javascript/lucky-numbers/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/79341c8ce8e0665123e4ad506b3776c7/tscancellation*
+Info 3    [20:58:10.599] Platform: linux NodeVersion: 14 CaseSensitive: true
+Info 4    [20:58:10.599] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [20:58:10.622] Format host information updated
+Info 6    [20:58:14.806] Search path: /home/benjamin/exercism/javascript/lucky-numbers
+Info 7    [20:58:14.807] For info: /home/benjamin/exercism/javascript/lucky-numbers/lucky-numbers.js :: No config files found.
+Info 8    [20:58:14.815] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 9    [20:58:19.757] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 4941.716949999332ms
+Info 10   [20:58:19.757] Project '/dev/null/inferredProject1*' (Inferred)
+Info 11   [20:58:19.757] 	Files (171)
+
+Info 12   [20:58:19.757] -----------------------------------------------
+Info 13   [20:58:30.603] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 14   [20:58:31.639] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: true structureIsReused:: Not Elapsed: 1035.8215200304985ms
+Info 15   [20:58:31.639] Project '/dev/null/inferredProject1*' (Inferred)
+Info 16   [20:58:31.639] 	Files (259)
+
+Info 17   [20:58:31.639] -----------------------------------------------
+Info 18   [20:58:32.213] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 19   [20:58:32.350] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 3 structureChanged: true structureIsReused:: Not Elapsed: 137.27230203151703ms
+Info 20   [20:58:32.350] Project '/dev/null/inferredProject1*' (Inferred)
+Info 21   [20:58:32.351] 	Files (253)
+
+Info 22   [20:58:32.351] -----------------------------------------------
+Info 23   [20:58:34.464] Before ensureProjectForOpenFiles:
+Info 24   [20:58:34.464] After ensureProjectForOpenFiles:
+Info 25   [20:58:34.465] got projects updated in background, updating diagnostics for /home/benjamin/exercism/javascript/lucky-numbers/lucky-numbers.js
+Info 26   [21:09:21.498] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 27   [21:09:21.654] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 155.5274749994278ms
+Info 28   [21:09:21.654] Different program with same set of files
+Info 29   [21:09:23.709] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 30   [21:09:23.766] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 56.637688994407654ms
+Info 31   [21:09:23.766] Different program with same set of files
+Info 32   [21:09:26.222] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 33   [21:09:26.359] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 137.3597960472107ms
+Info 34   [21:09:26.360] Different program with same set of files
+Info 35   [21:09:27.616] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 36   [21:09:27.711] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 95.3423080444336ms
+Info 37   [21:09:27.711] Different program with same set of files
+Info 38   [21:25:58.268] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 39   [21:25:58.389] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 120.69204503297806ms
+Info 40   [21:25:58.389] Different program with same set of files
+Info 41   [21:26:00.326] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 42   [21:26:00.425] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 98.71407800912857ms
+Info 43   [21:26:00.425] Different program with same set of files
+Info 44   [21:26:00.429] getCompletionData: Get current token: 0.060667991638183594
+Info 45   [21:26:00.430] getCompletionData: Is inside comment: 0.1204729676246643
+Info 46   [21:26:00.430] getCompletionData: Get previous token: 0.1354910135269165
+Info 47   [21:26:00.431] getCompletionsAtPosition: isCompletionListBlocker: 0.5108090043067932
+Info 48   [21:26:00.442] getExportInfoMap: cache miss or empty; calculating new results
+Info 49   [21:26:00.614] getExportInfoMap: done in 172.46696197986603 ms
+Info 50   [21:26:00.651] collectAutoImports: resolved 0 module specifiers, plus 20 ambient and 0 from cache
+Info 51   [21:26:00.652] collectAutoImports: response is complete
+Info 52   [21:26:00.652] collectAutoImports: 36.99112403392792
+Info 53   [21:26:00.652] getCompletionData: Semantic work: 220.75833797454834
+Info 54   [21:26:00.681] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 28.94853800535202
+Info 55   [21:26:02.989] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 56   [21:26:03.069] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 79.4934189915657ms
+Info 57   [21:26:03.069] Different program with same set of files
