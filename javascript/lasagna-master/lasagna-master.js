@@ -10,3 +10,8 @@
  *   ...
  * }
  */
+export const cookingStatus = (n) => {
+  if (n === undefined || n === null) return "You forgot to set the timer.";
+  if (n === 0) return "Lasagna is done.";
+  return "Not done, please wait.";
+};
