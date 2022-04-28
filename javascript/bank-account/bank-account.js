@@ -5,32 +5,39 @@
 
 export class BankAccount {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.isOpen = false;
+    this._balance = 0;
   }
 
   open() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.isOpen) throw new ValueError();
+    this.isOpen = true;
   }
 
   close() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.isOpen) throw new ValueError();
+    this.isOpen = false;
+    this._balance = 0;
   }
 
-  deposit() {
-    throw new Error('Remove this statement and implement this function');
+  deposit(amt) {
+    if (!this.isOpen || amt < 0) throw new ValueError();
+    this._balance += amt;
   }
 
-  withdraw() {
-    throw new Error('Remove this statement and implement this function');
+  withdraw(amt) {
+    if (!this.isOpen || amt < 0 || amt > this._balance) throw new ValueError();
+    this._balance -= amt;
   }
 
   get balance() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.isOpen) throw new ValueError();
+    return this._balance;
   }
 }
 
 export class ValueError extends Error {
   constructor() {
-    super('Bank account error');
+    super("Bank account error");
   }
 }
