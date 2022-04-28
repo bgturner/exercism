@@ -15,3 +15,7 @@ export const cookingStatus = (n) => {
   if (n === 0) return "Lasagna is done.";
   return "Not done, please wait.";
 };
+
+export const preparationTime = (layers, factor = 2) => {
+  return layers.length * factor;
+};
