@@ -19,3 +19,18 @@ export const cookingStatus = (n) => {
 export const preparationTime = (layers, factor = 2) => {
   return layers.length * factor;
 };
+
+export const quantities = (layers) => {
+  const qty = {
+    noodles: 0,
+    sauce: 0,
+  };
+  const amts = {
+    noodles: 50,
+    sauce: 0.2,
+  };
+  for (let item of layers) {
+    if (item in amts) qty[item] += amts[item];
+  }
+  return qty;
+};
