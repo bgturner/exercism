@@ -39,3 +39,10 @@ export const addSecretIngredient = (friends, mine) => {
   mine.push(friends[friends.length - 1]);
 };
 
+export const scaleRecipe = (recipe, scale) => {
+  const r = {};
+  for (const [key, val] of Object.entries(recipe)) {
+    r[key] = (val / 2) * scale;
+  }
+  return r;
+};
