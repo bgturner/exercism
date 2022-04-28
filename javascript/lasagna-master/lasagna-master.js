@@ -34,3 +34,8 @@ export const quantities = (layers) => {
   }
   return qty;
 };
+
+export const addSecretIngredient = (friends, mine) => {
+  mine.push(friends[friends.length - 1]);
+};
+
