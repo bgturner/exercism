@@ -25,8 +25,11 @@ export const getCardPosition = (stack, card) => {
  * @returns {boolean} true if card is in the stack, false otherwise
  */
 export const doesStackIncludeCard = (stack, card) => {
-  return stack.indexOf(card) >= 0;
+  return stack.includes(card);
 };
+
+const isEven = (x) => x % 2 === 0;
+const isOdd = (x) => !isEven(x);
 
 /**
  * Determine if each card is even
@@ -36,21 +39,7 @@ export const doesStackIncludeCard = (stack, card) => {
  * @returns {boolean} true if all cards are even, false otherwise
  */
 export const isEachCardEven = (stack) => {
-  for (var i = 0; i < stack.length; i++) {
-    if (stack[i] % 2 !== 0) {
-      return false;
-    }
-  }
-  return true;
-};
-
-export const getFirstOddCardIndex = (stack) => {
-  for (var i = 0; i < stack.length; i++) {
-    if (stack[i] % 2 !== 0) {
-      return i;
-    }
-  }
-  return -1;
+  return stack.every((el) => isEven(el));
 };
 
 /**
@@ -61,8 +50,7 @@ export const getFirstOddCardIndex = (stack) => {
  * @returns {boolean} true if the array contains odd card, false otherwise
  */
 export const doesStackIncludeOddCard = (stack) => {
-  const oddIndex = getFirstOddCardIndex(stack);
-  return oddIndex >= 0 ? true : false;
+  return stack.some((el) => isOdd(el));
 };
 
 /**
@@ -73,8 +61,7 @@ export const doesStackIncludeOddCard = (stack) => {
  * @returns {number} the first odd value
  */
 export const getFirstOddCard = (stack) => {
-  const oddIndex = getFirstOddCardIndex(stack);
-  return oddIndex >= 0 ? stack[oddIndex] : undefined;
+  return stack.find((el) => isOdd(el));
 };
 
 /**
@@ -85,10 +72,5 @@ export const getFirstOddCard = (stack) => {
  * @returns {number} position of the first card that is even
  */
 export const getFirstEvenCardPosition = (stack) => {
-  for (var i = 0; i < stack.length; i++) {
-    if (stack[i] % 2 === 0) {
-      return i;
-    }
-  }
-  return -1;
+  return stack.findIndex((el) => isEven(el));
 };
